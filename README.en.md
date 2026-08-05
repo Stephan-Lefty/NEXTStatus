@@ -159,12 +159,14 @@ background script.
 - Detecting "new information" = unread entries from the Nextcloud
   Notifications API (`/ocs/v2.php/apps/notifications/api/v2/notifications`,
   the same source as the bell icon in the Nextcloud web UI) **plus**
-  unread Talk messages straight from the Talk API
-  (`/ocs/v2.php/apps/spreed/api/v4/room`, field `unreadMessages` per
-  conversation) – this also catches messages that, according to the
-  conversation's own settings, wouldn't trigger a bell notification. If
-  the Talk app isn't installed, this is silently skipped (not treated as
-  an error).
+  Talk mentions straight from the Talk API
+  (`/ocs/v2.php/apps/spreed/api/v4/room`, field `unreadMention` per
+  conversation – in one-on-one conversations, every new message
+  automatically counts as a mention). Deliberately only mentions, not
+  every new message in every group – otherwise the light would stay red
+  constantly in active group chats even when you're not actually the one
+  addressed. If the Talk app isn't installed, this is silently skipped
+  (not treated as an error).
   **Note:** for Talk messages, the actual read status in Nextcloud itself
   is what counts (only turns green once the conversation has really been
   opened in Talk) – unlike the bell, simply closing the dashboard tab is

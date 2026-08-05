@@ -165,11 +165,13 @@ kurz über ein unsichtbares "Offscreen-Dokument" (Berechtigung
 - Erkennung „neue Informationen“ = ungelesene Einträge der Nextcloud
   Notifications-API (`/ocs/v2.php/apps/notifications/api/v2/notifications`,
   dieselbe Quelle wie das Glocken-Symbol in der Nextcloud-Weboberfläche)
-  **plus** ungelesene Talk-Nachrichten direkt aus der Talk-API
-  (`/ocs/v2.php/apps/spreed/api/v4/room`, Feld `unreadMessages` je
-  Unterhaltung) – das erfasst auch Nachrichten, die laut den
-  Konversations-Einstellungen keine Glocken-Benachrichtigung auslösen.
-  Ist die Talk-App nicht installiert, wird das stillschweigend
+  **plus** Talk-Erwähnungen direkt aus der Talk-API
+  (`/ocs/v2.php/apps/spreed/api/v4/room`, Feld `unreadMention` je
+  Unterhaltung – bei Einzelgesprächen zählt dabei jede neue Nachricht
+  automatisch als Erwähnung). Bewusst nur Erwähnungen, nicht jede neue
+  Nachricht in jeder Gruppe – sonst würde die Ampel bei aktiven
+  Gruppen-Chats ständig rot sein, auch wenn man selbst gar nicht gemeint
+  ist. Ist die Talk-App nicht installiert, wird das stillschweigend
   übersprungen (kein Fehler).
   **Achtung:** Für Talk-Nachrichten zählt der tatsächliche Lesestatus in
   Nextcloud selbst (wird erst grün, wenn die Unterhaltung wirklich in

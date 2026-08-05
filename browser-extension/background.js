@@ -240,10 +240,16 @@ async function playViaOffscreenDocument(soundUrl) {
 // Nextcloud Talk trägt neue Nachrichten nicht immer in die Glocke ein -
 // je nach Konversations-Einstellung (z.B. Gruppen-Chats ohne Erwähnung)
 // bleibt das dort stumm. Die Talk-eigene API kennt den tatsächlichen
-// Lesestatus jeder Unterhaltung direkt (unreadMessages), unabhängig von
-// diesen Einstellungen. Fehlt die Talk-App auf dem Server oder schlägt die
-// Anfrage fehl, wird das nicht als Fehler des ganzen Kontos gewertet -
-// dann zählt einfach nur die Glocke wie bisher.
+// Lesestatus jeder Unterhaltung direkt, unabhängig von diesen
+// Einstellungen. Gezählt werden bewusst nur Unterhaltungen mit
+// "unreadMention" (Talk-eigenes Feld für "du wurdest erwähnt" - bei
+// Einzelgesprächen gilt dabei jede neue Nachricht automatisch als
+// Erwähnung), NICHT die allgemeine "unreadMessages"-Zahl - sonst würde
+// jede noch so unwichtige neue Nachricht in einer großen Gruppe die
+// Ampel auf Rot springen lassen, nicht nur wenn man selbst gemeint ist.
+// Fehlt die Talk-App auf dem Server oder schlägt die Anfrage fehl, wird
+// das nicht als Fehler des ganzen Kontos gewertet - dann zählt einfach
+// nur die Glocke wie bisher.
 async function fetchTalkUnreadCount(account) {
     try {
         const response = await fetch(`${account.server}/ocs/v2.php/apps/spreed/api/v4/room`, {
@@ -257,7 +263,7 @@ async function fetchTalkUnreadCount(account) {
         if (!response.ok) return 0;
         const body = await response.json();
         const rooms = body?.ocs?.data || [];
-        return rooms.reduce((sum, room) => sum + (room.unreadMessages || 0), 0);
+        return rooms.filter(room => room.unreadMention).length;
     } catch {
         return 0;
     }
