@@ -116,4 +116,15 @@ github.com/Stephan-Lefty/NEXTStatus
     eingetragene Nextcloud-Domain angefragt, nicht pauschal beim
     Installieren - siehe Datenschutzerklärung.
 - **Icon**: `browser-extension/icons/icon128.png` (bereits vorhanden)
-- **Screenshots**: siehe `docs/chrome-web-store/` (1280x800px)
+- **Screenshots** (max. 5, 1280x800 oder 640x400, JPEG/24-Bit-PNG ohne
+  Alphakanal – alle Dateien unten bereits geprüft, RGB ohne Alpha):
+  in `docs/chrome-web-store/`
+  1. `store-1-popup.png` – Popup mit mehreren Konten
+  2. `store-2-accounts.png` – Konten & Einstellungen (Übersicht)
+  3. `store-3-legend.png` – Farberklärung
+  4. `store-4-add-account.png` – Konto hinzufügen
+  5. `store-5-preferences.png` – Prüfintervall & Hinweiston
+
+  `screenshot-de.png`/`screenshot-en.png` sind zusätzliche Werbegrafiken
+  (falls das Dashboard ein separates Promo-Bild anbietet) – keine der
+  fünf Pflicht-Screenshots.
