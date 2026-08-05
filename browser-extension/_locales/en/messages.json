@@ -1,6 +1,6 @@
 {
     "extName": { "message": "NEXTStatus" },
-    "extDescription": { "message": "Shows whether new notifications are waiting for you across multiple Nextcloud accounts (green/red), and opens the dashboard with one click." },
+    "extDescription": { "message": "Shows if new notifications are waiting across multiple Nextcloud accounts (green/red) and opens the dashboard with one click." },
 
     "statusLoggedOut": { "message": "Signed out" },
     "statusCheckErrorFallback": { "message": "Check failed" },
