@@ -1,4 +1,4 @@
-[Deutsch](README.md) | [English](README.en.md)
+[Deutsch](README.md) | [English](README.en.md) | [Changelog](#changelog)
 
 # NEXTStatus
 
@@ -200,6 +200,29 @@ background script.
   own API.
 - Credentials are stored unencrypted in `browser.storage.local` (see
   "Technical background" above).
+
+## Changelog
+
+Refers to the browser extension's version number
+(`browser-extension/manifest.json`).
+
+### 0.1.0
+First published version (Chrome Web Store and Firefox Add-ons):
+- Traffic-light status (green/red/orange) for any number of Nextcloud
+  accounts, including multiple users of the same Nextcloud.
+- Detection via the Notifications API (bell: mail/other) and the Talk
+  API (real mentions only, not every message).
+- Sign in with username/password - automatically generates an app
+  password, the real password is never stored.
+- Configurable per account: Talk/Mail/Other categories, alert sound
+  on/off, sign out without losing data, sign in again.
+- Clicking the light opens the dashboard and immediately switches to
+  orange until the next check confirms it.
+- A dedicated, reliably audible alert sound (independent of the
+  browser's own notification settings) with a test button.
+- Settings window automatically resizes to fit its content, and brings
+  an already-open window to the front instead of opening another one.
+- German and English.
 
 ## Reporting bugs
 

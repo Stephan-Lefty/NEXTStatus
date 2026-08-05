@@ -1,4 +1,4 @@
-[Deutsch](README.md) | [English](README.en.md)
+[Deutsch](README.md) | [English](README.en.md) | [Änderungsprotokoll](#änderungsprotokoll)
 
 # NEXTStatus
 
@@ -208,6 +208,29 @@ kurz über ein unsichtbares "Offscreen-Dokument" (Berechtigung
   Mail-App-API.
 - Zugangsdaten liegen unverschlüsselt in `browser.storage.local` (siehe
   "Technischer Hintergrund" oben).
+
+## Änderungsprotokoll
+
+Bezieht sich auf die Versionsnummer der Browser-Erweiterung
+(`browser-extension/manifest.json`).
+
+### 0.1.0
+Erste veröffentlichte Version (Chrome Web Store und Firefox Add-ons):
+- Ampel-Status (Grün/Rot/Orange) für beliebig viele Nextcloud-Konten,
+  auch mehrere Nutzer derselben Nextcloud.
+- Erkennung über die Notifications-API (Glocke: Mail/Sonstige) und die
+  Talk-API (nur echte Erwähnungen, nicht jede Nachricht).
+- Anmeldung per Benutzername/Passwort - erzeugt automatisch ein
+  App-Passwort, das echte Passwort wird nie gespeichert.
+- Pro Konto einzeln: Talk/Mail/Sonstige-Kategorien, Hinweiston an/aus,
+  Abmelden ohne Datenverlust, Wieder anmelden.
+- Klick auf die Ampel öffnet das Dashboard und schaltet sofort auf
+  Orange, bis der nächste Check das bestätigt.
+- Eigener, garantiert hörbarer Hinweiston (unabhängig von
+  Browser-eigenen Benachrichtigungs-Einstellungen) mit Test-Knopf.
+- Einstellungen-Fenster passt sich automatisch an den Inhalt an, holt
+  ein bereits offenes Fenster nach vorne statt ein weiteres zu öffnen.
+- Deutsch und Englisch.
 
 ## Bugs melden
 
