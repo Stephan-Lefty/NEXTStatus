@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>NEXTStatus</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="header">
+  <span>NEXTStatus</span>
+  <button id="refreshNow" data-i18n-title="popupRefreshTitle" title="Jetzt prüfen">⟳</button>
+</div>
+
+<div id="accountList" class="account-list">
+  <p class="empty-hint" id="emptyHint" data-i18n="emptyAccountsHint">Noch keine Konten hinzugefügt.</p>
+</div>
+
+<div class="footer">
+  <button id="openSettings" data-i18n="popupOpenSettingsButton">Konten &amp; Einstellungen</button>
+</div>
+
+<script src="browser-polyfill-shim.js"></script>
+<script src="i18n.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

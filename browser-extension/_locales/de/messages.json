@@ -1,0 +1,100 @@
+{
+    "extName": { "message": "NEXTStatus" },
+    "extDescription": { "message": "Zeigt für mehrere Nextcloud-Konten an, ob neue Benachrichtigungen bereitstehen (grün/rot), und öffnet das Dashboard per Klick." },
+
+    "statusLoggedOut": { "message": "Abgemeldet" },
+    "statusCheckErrorFallback": { "message": "Prüfung fehlgeschlagen" },
+    "statusOrange": { "message": "Angeschaut - Bestätigung folgt" },
+    "statusChecking": { "message": "Wird geprüft …" },
+    "statusNewCount": {
+        "message": "$count$ neue Benachrichtigung(en)",
+        "placeholders": { "count": { "content": "$1" } }
+    },
+    "statusAllRead": { "message": "Alles gelesen" },
+    "statusNoNewNotifications": { "message": "Keine neuen Benachrichtigungen" },
+
+    "popupRefreshTitle": { "message": "Jetzt prüfen" },
+    "popupDotTitle": { "message": "Dashboard öffnen" },
+    "popupOpenSettingsButton": { "message": "Konten & Einstellungen" },
+    "emptyAccountsHint": { "message": "Noch keine Konten hinzugefügt." },
+
+    "optionsPageTitle": { "message": "NEXTStatus – Einstellungen" },
+    "optionsHeading": { "message": "NEXTStatus – Konten & Einstellungen" },
+
+    "legendToggle": { "message": "Was bedeuten die Farben?" },
+    "legendGreenLabel": { "message": "Grün" },
+    "legendGreenText": { "message": "keine neuen Benachrichtigungen." },
+    "legendRedLabel": { "message": "Rot" },
+    "legendRedText": { "message": "neue Benachrichtigung(en) (Glocke, Mail oder Talk, je nach aktivierten Kategorien)." },
+    "legendOrangeLabel": { "message": "Orange" },
+    "legendOrangeText": { "message": "gerade angeschaut (Ampel angeklickt), Bestätigung durch die nächste Prüfung steht noch aus." },
+    "legendGrayLabel": { "message": "Grau" },
+    "legendGrayText": { "message": "Verbindungsfehler bei der letzten Prüfung (siehe Text darunter)." },
+    "legendLightGrayLabel": { "message": "Hellgrau" },
+    "legendLightGrayText": { "message": "Konto ist abgemeldet, wird nicht geprüft." },
+    "legendTalkHintLabel": { "message": "Besonderheit Talk:" },
+    "legendTalkHintText": {
+        "message": "Bei Mail und Sonstige reicht ein Klick auf die Ampel, damit es beim nächsten Check automatisch grün wird (der Klick-Zeitpunkt gilt dann als \"gelesen\"). Bei Talk zählt dagegen der echte Lesestatus in Nextcloud selbst - grün wird es nur, wenn die Unterhaltung tatsächlich in Talk (nicht nur im Dashboard) geöffnet und gelesen wurde. Ist bei einem Konto sowohl Talk als auch Mail/Sonstige der Grund für Rot, bleibt es trotz Anklicken rot, solange die Talk-Nachricht noch ungelesen ist."
+    },
+
+    "addAccountToggle": { "message": "Konto hinzufügen" },
+    "addAccountServerLabel": { "message": "Nextcloud-Adresse" },
+    "addAccountUsernameLabel": { "message": "Benutzername" },
+    "addAccountPasswordLabel": { "message": "Passwort" },
+    "addAccountHint": {
+        "message": "Das Passwort wird nur für diesen einen Anmeldeschritt verwendet und nicht gespeichert - die Erweiterung merkt sich stattdessen ein dabei automatisch erzeugtes App-Passwort. Ist für den Account Zwei-Faktor-Authentifizierung aktiv, schlägt diese direkte Anmeldung fehl - dann in Nextcloud unter Einstellungen → Sicherheit ein App-Passwort erstellen und hier anstelle des echten Passworts eingeben."
+    },
+    "addAccountMissingFieldsError": { "message": "Bitte Nextcloud-Adresse, Benutzername und Passwort eingeben." },
+    "addAccountCheckingStatus": { "message": "Anmeldung wird geprüft …" },
+    "addAccountSuccessStatus": { "message": "Konto erfolgreich hinzugefügt." },
+    "genericUnknownError": { "message": "Unbekannter Fehler." },
+
+    "settingsToggle": { "message": "Einstellungen" },
+    "intervalLabel": { "message": "Wie oft auf neue Benachrichtigungen prüfen" },
+    "intervalEvery1": { "message": "jede Minute" },
+    "intervalEvery5": { "message": "alle 5 Minuten" },
+    "intervalEvery15": { "message": "alle 15 Minuten" },
+    "intervalEvery30": { "message": "alle 30 Minuten" },
+    "soundEnabledLabel": { "message": "Hinweiston (Systembenachrichtigung) beim Wechsel auf Rot" },
+    "testSoundButton": { "message": "Testen" },
+    "soundTestFailedStatus": {
+        "message": "Testbenachrichtigung fehlgeschlagen: $error$",
+        "placeholders": { "error": { "content": "$1" } }
+    },
+    "soundTestSentStatus": { "message": "Testbenachrichtigung gesendet." },
+
+    "categoryTalk": { "message": "Talk" },
+    "categoryMail": { "message": "Mail" },
+    "categoryOther": { "message": "Sonstige" },
+    "muteEnableTitle": { "message": "Hinweiston für dieses Konto einschalten" },
+    "muteDisableTitle": { "message": "Hinweiston für dieses Konto ausschalten" },
+    "logoutButton": { "message": "Abmelden" },
+    "logoutRevokeFailedStatus": {
+        "message": "$displayName$: lokal abgemeldet - Widerruf auf dem Server ist fehlgeschlagen (App-Passwort ggf. manuell in Nextcloud unter Sicherheit entfernen).",
+        "placeholders": { "displayName": { "content": "$1" } }
+    },
+    "reloginButton": { "message": "Wieder anmelden" },
+    "reloginPasswordPlaceholder": { "message": "Passwort" },
+    "genericOk": { "message": "OK" },
+    "genericCancel": { "message": "Abbrechen" },
+    "reloginFailedFallback": { "message": "Anmeldung fehlgeschlagen." },
+    "removeAccountTitle": { "message": "Konto endgültig entfernen" },
+
+    "errorInvalidServerUrl": { "message": "Ungültige Server-Adresse." },
+    "errorPermissionDenied": { "message": "Berechtigung für diese Nextcloud-Adresse wurde nicht erteilt." },
+    "errorLoginFailed401": { "message": "Anmeldung fehlgeschlagen. Benutzername/Passwort prüfen - oder ist für diesen Account Zwei-Faktor-Authentifizierung aktiv? Damit lässt er sich hierüber nicht einrichten." },
+    "errorServerStatus": {
+        "message": "Server antwortete mit $status$.",
+        "placeholders": { "status": { "content": "$1" } }
+    },
+    "errorNoAppPassword": { "message": "Server hat kein App-Passwort zurückgegeben." },
+    "errorAccountNotFound": { "message": "Konto nicht gefunden." },
+    "notificationNewMessage": {
+        "message": "$displayName$ ($server$): neue Benachrichtigungen",
+        "placeholders": {
+            "displayName": { "content": "$1" },
+            "server": { "content": "$2" }
+        }
+    },
+    "notificationTestMessage": { "message": "Testbenachrichtigung - so sieht/klingt der Hinweiston." }
+}

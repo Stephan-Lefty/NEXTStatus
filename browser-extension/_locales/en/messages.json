@@ -1,0 +1,100 @@
+{
+    "extName": { "message": "NEXTStatus" },
+    "extDescription": { "message": "Shows whether new notifications are waiting for you across multiple Nextcloud accounts (green/red), and opens the dashboard with one click." },
+
+    "statusLoggedOut": { "message": "Signed out" },
+    "statusCheckErrorFallback": { "message": "Check failed" },
+    "statusOrange": { "message": "Just checked - confirming shortly" },
+    "statusChecking": { "message": "Checking …" },
+    "statusNewCount": {
+        "message": "$count$ new notification(s)",
+        "placeholders": { "count": { "content": "$1" } }
+    },
+    "statusAllRead": { "message": "All read" },
+    "statusNoNewNotifications": { "message": "No new notifications" },
+
+    "popupRefreshTitle": { "message": "Check now" },
+    "popupDotTitle": { "message": "Open dashboard" },
+    "popupOpenSettingsButton": { "message": "Accounts & Settings" },
+    "emptyAccountsHint": { "message": "No accounts added yet." },
+
+    "optionsPageTitle": { "message": "NEXTStatus – Settings" },
+    "optionsHeading": { "message": "NEXTStatus – Accounts & Settings" },
+
+    "legendToggle": { "message": "What do the colors mean?" },
+    "legendGreenLabel": { "message": "Green" },
+    "legendGreenText": { "message": "no new notifications." },
+    "legendRedLabel": { "message": "Red" },
+    "legendRedText": { "message": "new notification(s) (bell, mail, or Talk, depending on which categories are enabled)." },
+    "legendOrangeLabel": { "message": "Orange" },
+    "legendOrangeText": { "message": "just checked (light clicked), confirmation from the next check is still pending." },
+    "legendGrayLabel": { "message": "Gray" },
+    "legendGrayText": { "message": "connection error on the last check (see the text below it)." },
+    "legendLightGrayLabel": { "message": "Light gray" },
+    "legendLightGrayText": { "message": "account is signed out, not being checked." },
+    "legendTalkHintLabel": { "message": "Talk special case:" },
+    "legendTalkHintText": {
+        "message": "For Mail and Other, clicking the light is enough for it to turn green automatically on the next check (the click time counts as \"read\"). Talk, on the other hand, uses the real read status from Nextcloud itself - it only turns green once the conversation has actually been opened and read in Talk (not just in the dashboard). If both Talk and Mail/Other are the reason for red on an account, it stays red despite clicking as long as the Talk message is still unread."
+    },
+
+    "addAccountToggle": { "message": "Add account" },
+    "addAccountServerLabel": { "message": "Nextcloud address" },
+    "addAccountUsernameLabel": { "message": "Username" },
+    "addAccountPasswordLabel": { "message": "Password" },
+    "addAccountHint": {
+        "message": "The password is only used for this one sign-in step and never stored - the extension keeps an app password generated automatically during that step instead. If two-factor authentication is enabled for the account, this direct sign-in will fail - in that case create an app password in Nextcloud under Settings → Security and enter that here instead of the real password."
+    },
+    "addAccountMissingFieldsError": { "message": "Please enter the Nextcloud address, username, and password." },
+    "addAccountCheckingStatus": { "message": "Checking sign-in …" },
+    "addAccountSuccessStatus": { "message": "Account added successfully." },
+    "genericUnknownError": { "message": "Unknown error." },
+
+    "settingsToggle": { "message": "Settings" },
+    "intervalLabel": { "message": "How often to check for new notifications" },
+    "intervalEvery1": { "message": "every minute" },
+    "intervalEvery5": { "message": "every 5 minutes" },
+    "intervalEvery15": { "message": "every 15 minutes" },
+    "intervalEvery30": { "message": "every 30 minutes" },
+    "soundEnabledLabel": { "message": "Alert sound (system notification) when switching to red" },
+    "testSoundButton": { "message": "Test" },
+    "soundTestFailedStatus": {
+        "message": "Test notification failed: $error$",
+        "placeholders": { "error": { "content": "$1" } }
+    },
+    "soundTestSentStatus": { "message": "Test notification sent." },
+
+    "categoryTalk": { "message": "Talk" },
+    "categoryMail": { "message": "Mail" },
+    "categoryOther": { "message": "Other" },
+    "muteEnableTitle": { "message": "Turn on alert sound for this account" },
+    "muteDisableTitle": { "message": "Turn off alert sound for this account" },
+    "logoutButton": { "message": "Sign out" },
+    "logoutRevokeFailedStatus": {
+        "message": "$displayName$: signed out locally - revoking it on the server failed (you may need to remove the app password manually in Nextcloud under Security).",
+        "placeholders": { "displayName": { "content": "$1" } }
+    },
+    "reloginButton": { "message": "Sign in again" },
+    "reloginPasswordPlaceholder": { "message": "Password" },
+    "genericOk": { "message": "OK" },
+    "genericCancel": { "message": "Cancel" },
+    "reloginFailedFallback": { "message": "Sign-in failed." },
+    "removeAccountTitle": { "message": "Remove account permanently" },
+
+    "errorInvalidServerUrl": { "message": "Invalid server address." },
+    "errorPermissionDenied": { "message": "Permission for this Nextcloud address was not granted." },
+    "errorLoginFailed401": { "message": "Sign-in failed. Check the username/password - or is two-factor authentication enabled for this account? It can't be set up this way in that case." },
+    "errorServerStatus": {
+        "message": "Server responded with $status$.",
+        "placeholders": { "status": { "content": "$1" } }
+    },
+    "errorNoAppPassword": { "message": "Server did not return an app password." },
+    "errorAccountNotFound": { "message": "Account not found." },
+    "notificationNewMessage": {
+        "message": "$displayName$ ($server$): new notifications",
+        "placeholders": {
+            "displayName": { "content": "$1" },
+            "server": { "content": "$2" }
+        }
+    },
+    "notificationTestMessage": { "message": "Test notification - this is what the alert sound looks/sounds like." }
+}

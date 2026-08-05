@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title data-i18n="optionsPageTitle">NEXTStatus – Einstellungen</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+<h1 data-i18n="optionsHeading">NEXTStatus – Konten &amp; Einstellungen</h1>
+
+<section id="accountList" class="account-list">
+  <p class="empty-hint" id="emptyHint" data-i18n="emptyAccountsHint">Noch keine Konten hinzugefügt.</p>
+</section>
+
+<section class="legend">
+  <button id="toggleLegend" class="section-toggle" type="button">
+    <span id="toggleLegendIcon">▸</span> <span data-i18n="legendToggle">Was bedeuten die Farben?</span>
+  </button>
+  <div id="legendContent" hidden>
+    <ul class="legend-list">
+      <li><span class="dot green"></span> <strong data-i18n="legendGreenLabel">Grün</strong> <span data-i18n="legendGreenText">keine neuen Benachrichtigungen.</span></li>
+      <li><span class="dot red"></span> <strong data-i18n="legendRedLabel">Rot</strong> <span data-i18n="legendRedText">neue Benachrichtigung(en) (Glocke, Mail oder Talk, je nach aktivierten Kategorien).</span></li>
+      <li><span class="dot orange"></span> <strong data-i18n="legendOrangeLabel">Orange</strong> <span data-i18n="legendOrangeText">gerade angeschaut (Ampel angeklickt), Bestätigung durch die nächste Prüfung steht noch aus.</span></li>
+      <li><span class="dot error"></span> <strong data-i18n="legendGrayLabel">Grau</strong> <span data-i18n="legendGrayText">Verbindungsfehler bei der letzten Prüfung (siehe Text darunter).</span></li>
+      <li><span class="dot loggedOut"></span> <strong data-i18n="legendLightGrayLabel">Hellgrau</strong> <span data-i18n="legendLightGrayText">Konto ist abgemeldet, wird nicht geprüft.</span></li>
+    </ul>
+    <p class="hint">
+      <strong data-i18n="legendTalkHintLabel">Besonderheit Talk:</strong>
+      <span data-i18n="legendTalkHintText">Bei Mail und Sonstige reicht ein Klick auf die Ampel, damit es beim nächsten Check automatisch grün wird (der Klick-Zeitpunkt gilt dann als "gelesen"). Bei Talk zählt dagegen der echte Lesestatus in Nextcloud selbst - grün wird es nur, wenn die Unterhaltung tatsächlich in Talk (nicht nur im Dashboard) geöffnet und gelesen wurde. Ist bei einem Konto sowohl Talk als auch Mail/Sonstige der Grund für Rot, bleibt es trotz Anklicken rot, solange die Talk-Nachricht noch ungelesen ist.</span>
+    </p>
+  </div>
+</section>
+
+<section class="add-account">
+  <button id="toggleAddAccount" class="section-toggle" type="button">
+    <span id="toggleAddAccountIcon">▸</span> <span data-i18n="addAccountToggle">Konto hinzufügen</span>
+  </button>
+  <div id="addAccountForm" hidden>
+    <label for="serverUrl" data-i18n="addAccountServerLabel">Nextcloud-Adresse</label>
+    <input type="url" id="serverUrl" placeholder="https://cloud.example.com" autocomplete="off">
+    <label for="username" data-i18n="addAccountUsernameLabel">Benutzername</label>
+    <input type="text" id="username" autocomplete="off">
+    <label for="password" data-i18n="addAccountPasswordLabel">Passwort</label>
+    <input type="password" id="password" autocomplete="off">
+    <button id="addAccount" data-i18n="addAccountToggle">Konto hinzufügen</button>
+    <p id="addStatus" class="status"></p>
+    <p class="hint" data-i18n="addAccountHint">
+      Das Passwort wird nur für diesen einen Anmeldeschritt verwendet und
+      nicht gespeichert - die Erweiterung merkt sich stattdessen ein dabei
+      automatisch erzeugtes App-Passwort. Ist für den Account
+      Zwei-Faktor-Authentifizierung aktiv, schlägt diese direkte Anmeldung
+      fehl - dann in Nextcloud unter Einstellungen → Sicherheit ein
+      App-Passwort erstellen und hier anstelle des echten Passworts
+      eingeben.
+    </p>
+  </div>
+</section>
+
+<section class="settings">
+  <button id="toggleSettings" class="section-toggle" type="button">
+    <span id="toggleSettingsIcon">▸</span> <span data-i18n="settingsToggle">Einstellungen</span>
+  </button>
+  <div id="settingsForm" hidden>
+    <label for="intervalMinutes" data-i18n="intervalLabel">Wie oft auf neue Benachrichtigungen prüfen</label>
+    <select id="intervalMinutes">
+      <option value="1" data-i18n="intervalEvery1">jede Minute</option>
+      <option value="5" data-i18n="intervalEvery5">alle 5 Minuten</option>
+      <option value="15" data-i18n="intervalEvery15">alle 15 Minuten</option>
+      <option value="30" data-i18n="intervalEvery30">alle 30 Minuten</option>
+    </select>
+
+    <div class="sound-row">
+      <label class="checkbox-label">
+        <input type="checkbox" id="soundEnabled">
+        <span data-i18n="soundEnabledLabel">Hinweiston (Systembenachrichtigung) beim Wechsel auf Rot</span>
+      </label>
+      <button id="testSound" class="text-btn" data-i18n="testSoundButton">Testen</button>
+    </div>
+    <p id="soundTestStatus" class="status"></p>
+  </div>
+</section>
+
+<script src="browser-polyfill-shim.js"></script>
+<script src="i18n.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
