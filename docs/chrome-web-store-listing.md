@@ -128,3 +128,7 @@ github.com/Stephan-Lefty/NEXTStatus
   `screenshot-de.png`/`screenshot-en.png` sind zusätzliche Werbegrafiken
   (falls das Dashboard ein separates Promo-Bild anbietet) – keine der
   fünf Pflicht-Screenshots.
+- **Werbekacheln** (ebenfalls RGB-PNG ohne Alphakanal), in
+  `docs/chrome-web-store/`:
+  - Kleine Werbekachel (440x280): `promo-small-de.png` / `promo-small-en.png`
+  - Große Werbekachel (1400x560): `promo-large-de.png` / `promo-large-en.png`
