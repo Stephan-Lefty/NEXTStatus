@@ -9,6 +9,10 @@ Clicking a light opens that account's dashboard in a new tab.
 
 This project was built together with [Claude](https://claude.com).
 
+**Install:**
+[Chrome Web Store](https://chromewebstore.google.com/detail/ijalkfpbdeplenioiceiadjfekmohldp) ·
+[Firefox Add-ons](https://addons.mozilla.org/firefox/addon/nextstatus/)
+
 ![Popup with three accounts](docs/screenshots/popup-menu-en.png)
 
 ## How it works
@@ -46,7 +50,12 @@ NEXTStatus/
     └── icons/                     # icon (blue) + alert variant (red)
 ```
 
-## 1. Load the extension (unpacked/temporary)
+## 1. Load the extension
+
+Easiest way: install directly from the store (see links above) – the
+Chrome Web Store listing also works in Vivaldi/Edge/Brave/Opera. For
+development, or to test a locally modified version, it can also be
+loaded unpacked/temporarily:
 
 **Chrome / Vivaldi / Edge:**
 1. Open `chrome://extensions`

@@ -9,6 +9,10 @@ Klick auf eine Ampel öffnet das jeweilige Dashboard in einem neuen Tab.
 
 Dieses Projekt ist in Zusammenarbeit mit [Claude](https://claude.com) entstanden.
 
+**Installation:**
+[Chrome Web Store](https://chromewebstore.google.com/detail/ijalkfpbdeplenioiceiadjfekmohldp) ·
+[Firefox Add-ons](https://addons.mozilla.org/firefox/addon/nextstatus/)
+
 ![Popup mit drei Konten](docs/screenshots/popup-menu.png)
 
 ## Wie es funktioniert
@@ -48,7 +52,12 @@ NEXTStatus/
     └── icons/                     # Symbol (blau) + Alarm-Variante (rot)
 ```
 
-## 1. Erweiterung laden (unpacked/temporär)
+## 1. Erweiterung laden
+
+Am einfachsten direkt über den Store installieren (siehe Links oben) –
+bei Vivaldi/Edge/Brave/Opera funktioniert der Chrome-Web-Store-Eintrag
+ebenfalls. Für die Entwicklung bzw. um eine lokal geänderte Version zu
+testen, lässt sie sich auch unpacked/temporär laden:
 
 **Chrome / Vivaldi / Edge:**
 1. `chrome://extensions` öffnen
